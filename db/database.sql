@@ -1,4 +1,4 @@
-/*CREATE DATABASE api_rest_nodejs;
+CREATE DATABASE api_rest_nodejs;
 USE api_rest_nodejs;
 
 CREATE TABLE employee(
@@ -14,4 +14,4 @@ INSERT INTO employee VALUES
 (3, 'PRUEBA 3', 40000),
 (4, 'PRUEBA 4', 50000);
 
-DESCRIBE employee;*/
+DESCRIBE employee;
