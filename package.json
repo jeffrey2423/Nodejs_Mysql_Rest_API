@@ -1,0 +1,28 @@
+{
+  "name": "Nodejs_Mysql_Rest_API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrey2423/Nodejs_Mysql_Rest_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffrey2423/Nodejs_Mysql_Rest_API/issues"
+  },
+  "homepage": "https://github.com/jeffrey2423/Nodejs_Mysql_Rest_API#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
