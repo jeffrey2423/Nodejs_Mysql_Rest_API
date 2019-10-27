@@ -23,33 +23,43 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// INSERT An Employee
 router.post('/', (req, res) => {
     const {id, name, salary} = req.body;
     console.log(id, name, salary);
     const query = `
-      CALL employeeAddOrEdit(?, ?, ?);
+      SET @id = ?;
+      SET @name = ?;
+      SET @salary = ?;
+      CALL employeeAddOrEdit(@id, @name, @salary);
     `;
-    mysqlConnection.query(query,[id,name,salary],(err,rows, fields) =>{
-        if(!err){
-            res.json({Status: 'Empleado guardado'});
-        }else{
-            console.log(err);
-        }
+    mysqlConnection.query(query, [id, name, salary], (err, rows, fields) => {
+      if(!err) {
+        res.json({status: 'Employeed Saved'});
+      } else {
+        console.log(err);
+      }
     });
-});
-router.put('/:id', (req, res) => {
-    const {id, name, salary} = req.body;
+  
+  });
+  
+  router.put('/:id', (req, res) => {
+    const { name, salary } = req.body;
+    const { id } = req.params;
     const query = `
-      CALL employeeAddOrEdit(?, ?, ?);
+      SET @id = ?;
+      SET @name = ?;
+      SET @salary = ?;
+      CALL employeeAddOrEdit(@id, @name, @salary);
     `;
-    mysqlConnection.query(query,[id,name,salary],(err,rows, fields) =>{
-        if(!err){
-            res.json({Status: 'Empleado Actualizado'});
-        }else{
-            console.log(err);
-        }
+    mysqlConnection.query(query, [id, name, salary], (err, rows, fields) => {
+      if(!err) {
+        res.json({status: 'Employee Updated'});
+      } else {
+        console.log(err);
+      }
     });
-});
+  });
 
 router.delete('/:id', (req, res) => {
     const {id} = req.params;
