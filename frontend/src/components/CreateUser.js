@@ -58,7 +58,9 @@ export class CreateUser extends Component {
             <div className="col-md-5">
                 <div className="card">
                     <div className="card-body">
-                        <form onSubmit={this.onSubmit}>
+                        <form
+                            onSubmit={this.onSubmit}
+                        >
                             <div className="form-group">
                                 <input
                                     type="text"
