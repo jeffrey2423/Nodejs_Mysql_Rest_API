@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const morgan = require('morgan');
 require('dotenv').config()
 
@@ -10,6 +11,7 @@ app.set('port', process.env.PORT || 3000);
 
 //Middleware
 app.use(morgan('dev'));
+app.use(cors());
 app.use(express.json());
 
 //Routes
