@@ -9,6 +9,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import CreateUser from './components/CreateUser';
 import UsersList from './components/UsersList';
+import UploadImg from './components/UploadImg';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" exact component={UsersList} />
         <Route path="/edit/:id" exact component={CreateUser} />
         <Route path="/create" exact component={CreateUser} />
+        <Route path="/createImg" exact component={UploadImg} />
       </div>
     </Router>
   );

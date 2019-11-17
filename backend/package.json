@@ -18,11 +18,15 @@
   },
   "homepage": "https://github.com/jeffrey2423/Nodejs_Mysql_Rest_API#readme",
   "dependencies": {
+    "cloudinary": "^1.17.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
     "morgan": "^1.9.1",
-    "mysql": "^2.17.1"
+    "multer": "^1.4.2",
+    "mysql": "^2.17.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
